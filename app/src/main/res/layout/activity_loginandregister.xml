@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Screen_One_LoginandRegister">
+
+    <LinearLayout
+        android:id="@+id/TextWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="300dp"
+        android:elevation="6dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prueba"
+            android:textColor="#FFF"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/TextRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:elevation="6dp"
+        android:gravity="left"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/Help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bienvenido a MeRecomiendas"
+            android:transitionName="help"
+            android:textColor="#FFF"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Slogan"
+            android:textColor="#FFF"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/Formulario"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="6dp">
+
+        <ImageView
+            android:id="@+id/Circle_1"
+            android:layout_width="134dp"
+            android:layout_height="134dp"
+            android:src="@drawable/circle"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="250dp"
+            android:layout_marginRight="-90dp">
+        </ImageView>
+        <ImageView
+            android:id="@+id/Circle_2"
+            android:layout_width="134dp"
+            android:layout_height="134dp"
+            android:src="@drawable/circletransparant"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="250dp"
+            android:layout_marginRight="-90dp">
+        </ImageView>
+        <ImageView
+            android:id="@+id/Circle_3"
+            android:layout_width="182dp"
+            android:layout_height="182dp"
+            android:src="@drawable/circle"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="-80dp"
+            android:layout_marginBottom="-30dp">
+        </ImageView>
+        <ScrollView
+            android:id="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="25dp"
+                    app:cardElevation="10dp"
+                    app:cardCornerRadius="10dp"
+                    android:background="@drawable/cardregister">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="25dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Username"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_margin="10dp"/>
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Password"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_margin="10dp"/>
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="10dp"
+                    android:layout_below="@+id/cv"
+                    android:layout_alignLeft="@+id/cv"
+                    android:layout_alignRight="@+id/cv"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_marginTop="-50dp">
+
+                    <Button
+                        android:id="@+id/BtnInicioSesion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Iniciar"
+                        android:background="@drawable/btnregister"
+                        android:textColor="@color/colorWhite"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/cv"
+                    android:layout_alignTop="@+id/cv"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginRight="-20dp"
+                    android:elevation="10dp">
+
+                    <ImageButton
+                        android:id="@+id/BtnRegister"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_person"
+                        android:background="@drawable/btnregister"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/Forgot">
+
+                    <ImageButton
+                        android:id="@+id/InicioFacebook"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/ic_facebook"/>
+                    <ImageButton
+                        android:id="@+id/InicioGoogle"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="30dp"
+                        android:background="@drawable/ic_google"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/Forgot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:elevation="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:text="¿Olvidaste Contraseña?"
+                    android:textSize="14sp"/>
+
+            </RelativeLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ImgvWelcome"
+        android:layout_width="526dp"
+        android:layout_height="900dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/bgwelcomeanimation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.923"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

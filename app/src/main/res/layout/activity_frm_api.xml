@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".Screen_Two_FrmApi">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ImgProfile"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@color/colorWhite"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_addprofile"/>
+
+    <ScrollView
+        android:id="@+id/sc"
+        android:layout_below="@id/ImgProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/ImgProfile"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Uno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/ImgProfile"
+                android:textSize="20sp"
+                android:textColor="@color/colorWhite"
+                android:text="Nombre:"/>
+            <EditText
+                android:id="@+id/Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Uno"
+                android:textColor="@color/colorWhite"
+                android:hint="Inserta Nombre Completo"
+                android:textColorHint="@color/colorWhite"/>
+
+            <TextView
+                android:id="@+id/Dos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/ImgProfile"
+                android:textSize="20sp"
+                android:textColor="@color/colorWhite"
+                android:text="Email:"/>
+            <EditText
+                android:id="@+id/Correo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Dos"
+                android:textColor="@color/colorWhite"
+                android:hint="Inserta Correo Electronico"
+                android:textColorHint="@color/colorWhite"/>
+            <TextView
+                android:id="@+id/Tres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/Correo"
+                android:textSize="20sp"
+                android:textColor="@color/colorWhite"
+                android:text="Ubicacion:"/>
+            <Button
+                android:id="@+id/btnmapa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="boton mapa"/>
+            <LinearLayout
+                android:id="@+id/Cuatro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Tres"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".50"
+                    android:layout_marginTop="5dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorWhite"
+                    android:text="Estado:"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".50"
+                    android:layout_marginTop="5dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorWhite"
+                    android:text="Estado:"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Cinco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Cuatro"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/pais"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".50"
+                    android:drawSelectorOnTop="true"
+                    android:entries="@array/array_pais"
+                    />
+                <Spinner
+                    android:id="@+id/edo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".50"
+                    android:drawSelectorOnTop="true"
+                    android:entries="@array/array_edo"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/Seis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/Cinco"
+                android:textSize="20sp"
+                android:textColor="@color/colorWhite"
+                android:text="Identifica Tipo de Domicilio:"/>
+            <RadioGroup
+                android:id="@+id/rdgGrupo"
+                android:layout_below="@id/Seis"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkedButton="@+id/rdbOne"
+                android:layout_column="0"
+                android:layout_span="3">
+                <RadioButton
+                    android:id="@+id/rdbOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Domicilio"/>
+                <RadioButton
+                    android:id="@+id/rdbTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Oficina"/>
+                <RadioButton
+                    android:id="@+id/rdbThree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Otro"/>
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/Calley"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Seis"
+                android:textColor="@color/colorWhite"
+                android:hint="Inserta Calle y Numero"
+                android:textColorHint="@color/colorWhite"/>
+            <EditText
+                android:id="@+id/Colonia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Calley"
+                android:textColor="@color/colorWhite"
+                android:hint="Inserta Clonia"
+                android:textColorHint="@color/colorWhite"/>
+            <EditText
+                android:id="@+id/NumeroInt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Colonia"
+                android:textColor="@color/colorWhite"
+                android:hint="Inserta Calle y Numero"
+                android:textColorHint="@color/colorWhite"/>
+            <EditText
+                android:id="@+id/Cp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Seis"
+                android:textColor="@color/colorWhite"
+                android:hint="Inserta Codigo Postal"
+                android:textColorHint="@color/colorWhite"/>
+
+            <EditText
+                android:id="@+id/Detalle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Cp"
+                android:textColor="@color/colorWhite"
+                android:hint="Inserta Codigo Postal"
+                android:textColorHint="@color/colorWhite"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/otp"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="256dp"
+        android:elevation="20dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/btn_primary"
+        android:text="Inicia tu experiencia"
+        android:textColor="#FFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/sc"/>
+
+</RelativeLayout>

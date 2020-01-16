@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".On_Boarding">
+
+    <LinearLayout
+        android:id="@+id/todo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="21dp"
+        android:background="@drawable/bg_white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/Slide_Animation"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="30dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true" />
+
+
+        <TextView
+            android:id="@+id/Slide_Headers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:lineSpacingExtra="5dp"
+            android:text="Security First"
+            android:textAlignment="center"
+            android:textColor="#4B4587"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Slide_Description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="70dp"
+            android:lineSpacingExtra="5dp"
+            android:text="Automatically saved in our\nclouds and locked"
+            android:textAlignment="center"
+            android:textColor="#4B4587"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

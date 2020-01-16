@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".On_Boarding">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/ViewP_slides"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.viewpager.widget.ViewPager>
+    <Button
+        android:id="@+id/finishear"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="256dp"
+        android:elevation="20dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/btn_primary"
+        android:text="Inicia tu experiencia"
+        android:textColor="#FFF"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

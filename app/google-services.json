@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "8837862873",
+    "firebase_url": "https://merecomiendas-a47a6.firebaseio.com",
+    "project_id": "merecomiendas-a47a6",
+    "storage_bucket": "merecomiendas-a47a6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8837862873:android:ba0257dec0897a775f35c8",
+        "android_client_info": {
+          "package_name": "com.arggos.merecomiendas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8837862873-k6r3vldami74jmqi0hkb83fdh1ceptf2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.arggos.merecomiendas",
+            "certificate_hash": "b85d2c5b1eb3784fa4f860ec8bc4d40503b890c8"
+          }
+        },
+        {
+          "client_id": "8837862873-m3l62diuifmra2d8gi2kn79ihbfbs57l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZCfch4Z6QODpmV9SfRyGwY0A9WyzkBFI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8837862873-m3l62diuifmra2d8gi2kn79ihbfbs57l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
