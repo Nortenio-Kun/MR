@@ -36,6 +36,7 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
     testImplementation 'junit:junit:4.12'
     implementation 'com.firebaseui:firebase-ui-database:3.2.2'
+    implementation 'com.google.firebase:firebase-database:19.1.0'
     implementation 'com.hbb20:ccp:2.1.9'
     implementation 'pub.devrel:easypermissions:0.4.0'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'

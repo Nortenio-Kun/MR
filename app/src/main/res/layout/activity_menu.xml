@@ -47,7 +47,7 @@
                 android:id="@+id/fabMain"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:background="@drawable/ic_1000_px"
+                android:background="@drawable/ic_hearth"
                 android:elevation="10dp" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -93,6 +93,7 @@
 
 
             <ImageButton
+                android:id="@+id/Unouno"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:background="@drawable/ic_hogar"
@@ -139,6 +140,7 @@
 
 
             <ImageButton
+                android:id="@+id/Dosdos"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:background="@drawable/ic_auto"
@@ -185,6 +187,7 @@
 
 
             <ImageButton
+                android:id="@+id/Trestres"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:background="@drawable/ic_tuerca"
@@ -198,6 +201,7 @@
                 app:fabSize="mini" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/Otros"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_margin="4dp"
