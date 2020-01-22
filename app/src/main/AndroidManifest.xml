@@ -19,15 +19,16 @@
             android:name=".Screen_Four_Menu"
             android:label="@string/title_activity_screen__four__menu"
             android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Screen_Three_Otp" />
         <activity android:name=".Screen_Two_FrmApi" />
-        <activity android:name=".Screen_One_LoginandRegister" />
+        <activity android:name=".Screen_One_LoginandRegister">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity android:name=".Menu" />
         <activity android:name=".Register_Activity" />
         <activity android:name=".On_Boarding" />

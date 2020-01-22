@@ -94,7 +94,7 @@
                     android:layout_marginTop="5dp"
                     android:textSize="20sp"
                     android:textColor="@color/colorWhite"
-                    android:text="Estado:"/>
+                    android:text="Pais:"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -171,66 +171,43 @@
             </RadioGroup>
 
             <EditText
-                android:id="@+id/Calley"
+                android:id="@+id/Direccion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/Seis"
                 android:textColor="@color/colorWhite"
-                android:hint="Inserta Calle y Numero"
-                android:textColorHint="@color/colorWhite"/>
-            <EditText
-                android:id="@+id/Colonia"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/Calley"
-                android:textColor="@color/colorWhite"
-                android:hint="Inserta Clonia"
-                android:textColorHint="@color/colorWhite"/>
-            <EditText
-                android:id="@+id/NumeroInt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/Colonia"
-                android:textColor="@color/colorWhite"
-                android:hint="Inserta Calle y Numero"
-                android:textColorHint="@color/colorWhite"/>
-            <EditText
-                android:id="@+id/Cp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/Seis"
-                android:textColor="@color/colorWhite"
-                android:hint="Inserta Codigo Postal"
+                android:hint="Inserta tu Direccion"
                 android:textColorHint="@color/colorWhite"/>
 
             <EditText
-                android:id="@+id/Detalle"
+                android:id="@+id/Cp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/Cp"
                 android:textColor="@color/colorWhite"
                 android:hint="Inserta Codigo Postal"
                 android:textColorHint="@color/colorWhite"/>
+            <Button
+                android:id="@+id/otp"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="256dp"
+                android:elevation="20dp"
+                android:layout_gravity="center"
+                android:layout_height="45dp"
+                android:layout_marginStart="83dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="72dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/btn_primary"
+                android:text="Inicia tu experiencia"
+                android:textColor="#FFF"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
 
         </LinearLayout>
 
+
     </ScrollView>
 
-    <Button
-        android:id="@+id/otp"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="256dp"
-        android:elevation="20dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="83dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/btn_primary"
-        android:text="Inicia tu experiencia"
-        android:textColor="#FFF"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        android:layout_below="@+id/sc"/>
 
 </RelativeLayout>
