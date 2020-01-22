@@ -130,7 +130,8 @@ public class Screen_One_LoginandRegister extends AppCompatActivity implements Vi
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.BtnInicioSesion: /** Inicio de Sesion con Firebase via usuario y contraseña */
-                Mensaje("Firebase");
+                Intent i = new Intent(Screen_One_LoginandRegister.this,Screen_Four_Menu.class);
+                startActivity(i);
                 break;
             case R.id.InicioFacebook:
                 LoginManager.getInstance().logInWithReadPermissions(Screen_One_LoginandRegister.this, Arrays.asList("email","public_profile"));

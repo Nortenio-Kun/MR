@@ -89,6 +89,7 @@ public class snormal extends AppCompatActivity {
     }
 
     public void subir(View view) {
-
+        Intent i = new Intent(snormal.this,snormalmap.class);
+        startActivity(i);
     }
 }

@@ -33,7 +33,6 @@ public class Screen_Two_FrmApi extends AppCompatActivity {
     ImageView imagen;
     Button otp;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +44,6 @@ public class Screen_Two_FrmApi extends AppCompatActivity {
         correo = findViewById(R.id.Correo);
         imagen = findViewById(R.id.ImgProfile);
         direccion = findViewById(R.id.Direccion);
-        cp = findViewById(R.id.Cp);
         otp = findViewById(R.id.otp);
 
         cp = findViewById(R.id.Cp);
@@ -62,9 +60,9 @@ public class Screen_Two_FrmApi extends AppCompatActivity {
                 datosUsuario.put("Direction",direccion.getText().toString());
                 datosUsuario.put("Cp",cp.getText().toString());
                 current_user_db.child("Pd").push().setValue(datosUsuario);
-                /*Intent second = new Intent(Screen_Two_FrmApi.this, Screen_Three_Otp.class);
+                Intent second = new Intent(Screen_Two_FrmApi.this, Screen_Three_Otp.class);
                 startActivity(second);
-                finish();*/
+                finish();
             }
         });
 

@@ -34,7 +34,7 @@ public class Otros_Servicios extends AppCompatActivity {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         serv = new Servicios(this, prof);
         rv.setAdapter(serv);
-        database.getReference().getRoot().addValueEventListener(new ValueEventListener() {
+        database.getReference().getRoot().child("Profeciones").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 prof.removeAll(prof);
