@@ -1,6 +1,7 @@
 package com.arggos.merecomiendas;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -27,10 +28,11 @@ public class Otros_Servicios extends AppCompatActivity {
         setContentView(R.layout.activity_otros__servicios);
 
         rv = findViewById(R.id.Res1);
-        rv.setLayoutManager(new LinearLayoutManager(this));
+        //rv.setLayoutManager(new LinearLayoutManager(this));
+        rv.setLayoutManager(new GridLayoutManager(this, 3));
         prof = new ArrayList<>();
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        serv = new Servicios(prof);
+        serv = new Servicios(this, prof);
         rv.setAdapter(serv);
         database.getReference().getRoot().addValueEventListener(new ValueEventListener() {
             @Override

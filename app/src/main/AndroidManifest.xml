@@ -3,6 +3,7 @@
     package="com.arggos.merecomiendas">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -11,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Otros_Servicios"></activity>
+        <activity android:name=".snormal"></activity>
+        <activity android:name=".Otros_Servicios" />
         <activity android:name=".Test" />
         <activity
             android:name=".Screen_Four_Menu"
@@ -25,10 +27,10 @@
         </activity>
         <activity android:name=".Screen_Three_Otp" />
         <activity android:name=".Screen_Two_FrmApi" />
-        <activity android:name=".Screen_One_LoginandRegister"></activity>
+        <activity android:name=".Screen_One_LoginandRegister" />
         <activity android:name=".Menu" />
         <activity android:name=".Register_Activity" />
-        <activity android:name=".On_Boarding"></activity>
+        <activity android:name=".On_Boarding" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"

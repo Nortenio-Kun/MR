@@ -1,8 +1,12 @@
 package com.arggos.merecomiendas;
 
+import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -14,9 +18,11 @@ import java.util.List;
 public class Servicios extends RecyclerView.Adapter<Servicios.Profesiones>{
 
     List<Profesion> profesiones;
+    public static Context mcon;
 
-    public Servicios(List<Profesion> profesiones) {
+    public Servicios(Context con, List<Profesion> profesiones) {
         this.profesiones = profesiones;
+        mcon = con;
     }
 
     @NonNull
@@ -36,15 +42,25 @@ public class Servicios extends RecyclerView.Adapter<Servicios.Profesiones>{
     @Override
     public int getItemCount() {
         return profesiones.size();
-    }
 
-    public static class Profesiones extends RecyclerView.ViewHolder{
+}
+    public static class Profesiones extends RecyclerView.ViewHolder {
 
         TextView Nombre;
+        ImageButton boton;
 
         public Profesiones(@NonNull View itemView) {
             super(itemView);
             Nombre = itemView.findViewById(R.id.nombreprofesion);
+            boton = itemView.findViewById(R.id.Boton);
+            boton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mcon.startActivity(new Intent(mcon, snormal.class));
+                }
+            });
+
         }
     }
+
 }
