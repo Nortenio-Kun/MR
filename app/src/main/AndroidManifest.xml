@@ -43,7 +43,7 @@
         <activity
             android:name=".MapViewFragment"
             android:label="@string/title_activity_maps"></activity>
-        <activity android:name=".Test" />
+
         <activity
 
             android:name=".Screen_Four_Menu"
