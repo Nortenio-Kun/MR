@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="25dp"
+    tools:context=".snormal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Problema:"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".50"
+            android:text="Fecha"/>
+        <TextView
+            android:id="@+id/fecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".50"
+            android:text="Selecciona fecha en calendario"/>
+    </LinearLayout>
+    <EditText
+        android:hint="Ingresa la descripccion de tu problema e inmediaatamente nuestros especialistas llegaran a tu puerta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:lines="8"
+        android:minLines="6"
+        android:gravity="top|left"
+        android:maxLines="10"
+        android:scrollbars="vertical"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/f1"
+            android:onClick="Cargarimg"
+            android:background="@null"
+            android:src="@drawable/camara"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".33"/>
+        <ImageButton
+            android:id="@+id/f2"
+            android:background="@null"
+            android:src="@drawable/camara"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".33"/>
+        <ImageButton
+            android:id="@+id/f3"
+            android:onClick="CargarF"
+            android:background="@null"
+            android:src="@drawable/calendario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".33"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/otp"
+        android:onClick="subir"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="256dp"
+        android:elevation="20dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="7dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/btn_primary"
+        android:text="Buscar"
+        android:textColor="#FFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/sc"/>
+
+
+</LinearLayout>

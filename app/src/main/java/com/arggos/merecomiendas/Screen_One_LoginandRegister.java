@@ -174,11 +174,11 @@ public class Screen_One_LoginandRegister extends AppCompatActivity implements Vi
             try {
                 GoogleSignInAccount account = task.getResult(ApiException.class);
                 if(account != null){
-                    Log.d("TAGGO", "firebaseauthwithgoogle "+account.getId());
+                    Log.e("TAGGO", "firebaseauthwithgoogle "+account.getId());
                     AuthCredential credential = GoogleAuthProvider.getCredential(account.getIdToken(),null);
                     mAuth.signInWithCredential(credential).addOnCompleteListener(this, tasks -> {
                         if(tasks.isSuccessful()){
-                            Log.d("TAGGO", "signin success");
+                            Log.e("TAGGO", "signin success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             SharedPreferences.Editor editor = pref.edit();
                             editor.putString("Imagen",String.valueOf(user.getPhotoUrl()));

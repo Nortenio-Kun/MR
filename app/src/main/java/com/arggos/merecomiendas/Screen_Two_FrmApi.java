@@ -17,14 +17,19 @@ import android.widget.Toast;
 
 import com.google.android.gms.maps.MapFragment;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class Screen_Two_FrmApi extends AppCompatActivity {
 
     //Variables generales de Firebase
     private FirebaseAuth mAuth;
     //Variables formulario
-    EditText name,correo;
+    EditText name,correo,direccion,cp;
     ImageView imagen;
     Button otp,map;
     EditText calle,colonia,num,cp;
@@ -34,9 +39,13 @@ public class Screen_Two_FrmApi extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_frm_api);
 
+        mAuth = FirebaseAuth.getInstance();
+
         name = findViewById(R.id.Name);
         correo = findViewById(R.id.Correo);
         imagen = findViewById(R.id.ImgProfile);
+        direccion = findViewById(R.id.Direccion);
+        cp = findViewById(R.id.Cp);
         otp = findViewById(R.id.otp);
         calle = findViewById(R.id.Calle);
         colonia = findViewById(R.id.Colonia);
@@ -46,9 +55,18 @@ public class Screen_Two_FrmApi extends AppCompatActivity {
         otp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent second = new Intent(Screen_Two_FrmApi.this, Screen_Three_Otp.class);
+                String user_id = mAuth.getCurrentUser().getUid();
+                DatabaseReference current_user_db = FirebaseDatabase.getInstance().getReference().child("Users").child("Costumers").child(user_id);
+                //current_user_db.setValue(true);
+                Map<String, Object> datosUsuario = new HashMap<>();
+                datosUsuario.put("Name",name.getText().toString());
+                datosUsuario.put("Email",correo.getText().toString());
+                datosUsuario.put("Direction",direccion.getText().toString());
+                datosUsuario.put("Cp",cp.getText().toString());
+                current_user_db.child("Pd").push().setValue(datosUsuario);
+                /*Intent second = new Intent(Screen_Two_FrmApi.this, Screen_Three_Otp.class);
                 startActivity(second);
-                finish();
+                finish();*/
             }
         });
 
