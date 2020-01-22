@@ -31,8 +31,7 @@ public class Screen_Two_FrmApi extends AppCompatActivity {
     //Variables formulario
     EditText name,correo,direccion,cp;
     ImageView imagen;
-    Button otp,map;
-    EditText calle,colonia,num,cp;
+    Button otp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,11 +44,7 @@ public class Screen_Two_FrmApi extends AppCompatActivity {
         correo = findViewById(R.id.Correo);
         imagen = findViewById(R.id.ImgProfile);
         direccion = findViewById(R.id.Direccion);
-        cp = findViewById(R.id.Cp);
         otp = findViewById(R.id.otp);
-        calle = findViewById(R.id.Calle);
-        colonia = findViewById(R.id.Colonia);
-        num = findViewById(R.id.NumeroInt);
         cp = findViewById(R.id.Cp);
 
         otp.setOnClickListener(new View.OnClickListener() {
@@ -64,9 +59,9 @@ public class Screen_Two_FrmApi extends AppCompatActivity {
                 datosUsuario.put("Direction",direccion.getText().toString());
                 datosUsuario.put("Cp",cp.getText().toString());
                 current_user_db.child("Pd").push().setValue(datosUsuario);
-                /*Intent second = new Intent(Screen_Two_FrmApi.this, Screen_Three_Otp.class);
+                Intent second = new Intent(Screen_Two_FrmApi.this, Screen_Three_Otp.class);
                 startActivity(second);
-                finish();*/
+                finish();
             }
         });
 
@@ -102,6 +97,6 @@ public class Screen_Two_FrmApi extends AppCompatActivity {
 
     public void llenar(){
         SharedPreferences sp = this.getPreferences( MODE_PRIVATE);
-        calle.setText(sp.getString("direccion","hola"));
+        direccion.setText(sp.getString("direccion","hola"));
     }
 }
