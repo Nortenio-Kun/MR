@@ -27,7 +27,7 @@ public class Menu extends AppCompatActivity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        SpaceNavigationView spaceNavigationView = (SpaceNavigationView) findViewById(R.id.space);
+      /*  SpaceNavigationView spaceNavigationView = (SpaceNavigationView) findViewById(R.id.space);
         spaceNavigationView.initWithSaveInstanceState(savedInstanceState);
         spaceNavigationView.addSpaceItem(new SpaceItem("", R.drawable.iconone));
         spaceNavigationView.addSpaceItem(new SpaceItem("", R.drawable.iconthree));
@@ -50,7 +50,7 @@ public class Menu extends AppCompatActivity implements View.OnClickListener{
                 //Toast.makeText(Menu.this, itemIndex + " " + itemName, Toast.LENGTH_SHORT).show();
             }
         });
-        //spaceNavigationView.showBadgeAtIndex(0, 3, 2);
+        //spaceNavigationView.showBadgeAtIndex(0, 3, 2);*/
         initFabMenu();
 
     }

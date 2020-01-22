@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context=".Screen_Two_FrmApi">
+    tools:context=".Screen_Two_FrmApi"
+    android:id="@+id/Form">
 
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -79,6 +80,7 @@
                 android:id="@+id/btnmapa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="auto_llenado"
                 android:text="boton mapa"/>
             <LinearLayout
                 android:id="@+id/Cuatro"
@@ -171,12 +173,16 @@
             </RadioGroup>
 
             <EditText
+
                 android:id="@+id/Direccion"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/Seis"
                 android:textColor="@color/colorWhite"
+
                 android:hint="Inserta tu Direccion"
+
                 android:textColorHint="@color/colorWhite"/>
 
             <EditText
@@ -208,6 +214,8 @@
 
 
     </ScrollView>
+
+
 
 
 </RelativeLayout>

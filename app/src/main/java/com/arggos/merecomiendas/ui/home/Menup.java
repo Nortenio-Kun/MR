@@ -41,31 +41,6 @@ public class Menup extends Fragment implements View.OnClickListener{
                                 Bundle savedInstanceState) {
        view = inflater.inflate(R.layout.activity_menu, container, false);
 
-
-        SpaceNavigationView spaceNavigationView = (SpaceNavigationView) view.findViewById(R.id.space);
-        spaceNavigationView.initWithSaveInstanceState(savedInstanceState);
-        spaceNavigationView.addSpaceItem(new SpaceItem("", R.drawable.iconone));
-        spaceNavigationView.addSpaceItem(new SpaceItem("", R.drawable.iconthree));
-        spaceNavigationView.addSpaceItem(new SpaceItem("", R.drawable.iconfour));
-        spaceNavigationView.addSpaceItem(new SpaceItem("", R.drawable.iconfive));
-        spaceNavigationView.setSpaceOnClickListener(new SpaceOnClickListener() {
-            @Override
-            public void onCentreButtonClick() {
-                Toast.makeText(getContext(), "onCentreButtonClick", Toast.LENGTH_SHORT).show();
-
-            }
-
-            @Override
-            public void onItemClick(int itemIndex, String itemName) {
-                Toast.makeText(getContext(), itemIndex + " " + itemName, Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onItemReselected(int itemIndex, String itemName) {
-                //Toast.makeText(Menu.this, itemIndex + " " + itemName, Toast.LENGTH_SHORT).show();
-            }
-        });
-        //spaceNavigationView.showBadgeAtIndex(0, 3, 2);
         initFabMenu();
 
 return view;
