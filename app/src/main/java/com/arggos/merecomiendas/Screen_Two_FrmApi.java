@@ -45,6 +45,7 @@ public class Screen_Two_FrmApi extends AppCompatActivity {
         imagen = findViewById(R.id.ImgProfile);
         direccion = findViewById(R.id.Direccion);
         otp = findViewById(R.id.otp);
+
         cp = findViewById(R.id.Cp);
 
         otp.setOnClickListener(new View.OnClickListener() {
@@ -87,6 +88,7 @@ public class Screen_Two_FrmApi extends AppCompatActivity {
     }
 
     public void auto_llenado(View view){
+
 
         Fragment mFragment = null;
         mFragment = new MapViewFragment();

@@ -47,9 +47,9 @@
         <activity android:name=".Test" />
         <activity
             android:name=".MapViewFragment"
+
             android:label="@string/title_activity_maps" />
-        <activity android:name=".Test" />
-        <activity
+
             android:name=".Screen_Four_Menu"
             android:label="@string/title_activity_screen__four__menu"
             android:theme="@style/AppTheme.NoActionBar"></activity>
