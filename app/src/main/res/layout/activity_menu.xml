@@ -208,26 +208,4 @@
 
     </LinearLayout>
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:ignore="MissingConstraints">
-
-        <com.luseen.spacenavigation.SpaceNavigationView
-            android:id="@+id/space"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="bottom"
-            app:active_item_color="@color/colorAccent"
-            app:centre_button_color="@color/centre_button_color"
-            app:centre_button_icon="@drawable/iconthree"
-            app:inactive_item_color="@color/colorWhite"
-            app:space_background_color="@color/colorPrimary"
-            app:space_item_icon_only_size="@dimen/space_item_icon_only_size"
-            app:space_item_icon_size="@dimen/space_item_icon_default_size"
-            app:space_item_text_size="@dimen/space_item_text_default_size" />
-    </RelativeLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

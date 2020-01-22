@@ -9,30 +9,44 @@
             android:icon="@drawable/ic_hogar"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_perfil"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:title="@string/menu_perfil" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_mensajes"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:title="@string/menu_mensajes" />
         <item
-            android:id="@+id/nav_tools"
+            android:id="@+id/nav_anuncios"
             android:icon="@drawable/ic_menu_manage"
-            android:title="@string/menu_tools" />
-    </group>
-
-    <item android:title="Communicate">
-        <menu>
+            android:title="@string/menu_anuncios" />
             <item
-                android:id="@+id/nav_share"
+                android:id="@+id/nav_favoritos"
                 android:icon="@drawable/ic_menu_share"
-                android:title="@string/menu_share" />
+                android:title="@string/menu_favoritos" />
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/nav_pagos"
                 android:icon="@drawable/ic_menu_send"
-                android:title="@string/menu_send" />
-        </menu>
-    </item>
-
+                android:title="@string/menu_pagos" />
+        <item
+            android:id="@+id/nav_servicios"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/menu_servicios" />
+        <item
+            android:id="@+id/nav_cotizaciones"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/menu_cotizaciones" />
+        <item
+            android:id="@+id/nav_aclaraciones"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/menu_aclaraciones" />
+        <item
+            android:id="@+id/nav_ayuda"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/menu_ayuda" />
+        <item
+            android:id="@+id/nav_config"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/menu_config" />
+    </group>
 </menu>

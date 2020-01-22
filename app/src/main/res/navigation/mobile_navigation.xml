@@ -11,32 +11,55 @@
         android:label="@string/menu_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.arggos.merecomiendas.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_perfil"
+        android:name="com.arggos.merecomiendas.ui.perfil.perfil"
+        android:label="@string/menu_perfil"
+        />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.arggos.merecomiendas.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_mensajes"
+        android:name="com.arggos.merecomiendas.ui.mensajes.mensajes"
+        android:label="@string/menu_mensajes"
+      />
 
     <fragment
-        android:id="@+id/nav_tools"
-        android:name="com.arggos.merecomiendas.ui.tools.ToolsFragment"
-        android:label="@string/menu_tools"
-        tools:layout="@layout/fragment_tools" />
-
+        android:id="@+id/nav_anuncios"
+        android:name="com.arggos.merecomiendas.ui.anuncios.anuncios"
+        android:label="@string/menu_anuncios"
+       />
     <fragment
-        android:id="@+id/nav_share"
-        android:name="com.arggos.merecomiendas.ui.share.ShareFragment"
-        android:label="@string/menu_share"
-        tools:layout="@layout/fragment_share" />
-
+        android:id="@+id/nav_favoritos"
+        android:name="com.arggos.merecomiendas.ui.favoritos.favoritos"
+        android:label="@string/menu_favoritos"
+        />
     <fragment
-        android:id="@+id/nav_send"
-        android:name="com.arggos.merecomiendas.ui.send.SendFragment"
-        android:label="@string/menu_send"
-        tools:layout="@layout/fragment_send" />
+        android:id="@+id/nav_pagos"
+        android:name="com.arggos.merecomiendas.ui.pagos.pagos"
+        android:label="@string/menu_pagos"
+       />
+    <fragment
+        android:id="@+id/nav_servicios"
+        android:name="com.arggos.merecomiendas.ui.servicios.servicios"
+        android:label="@string/menu_servicios"
+        />
+    <fragment
+        android:id="@+id/nav_cotizaciones"
+        android:name="com.arggos.merecomiendas.ui.cotizaciones.cotizaciones"
+        android:label="@string/menu_cotizaciones"
+        />
+    <fragment
+        android:id="@+id/nav_aclaraciones"
+        android:name="com.arggos.merecomiendas.ui.aclaraciones.aclaraciones"
+        android:label="@string/menu_aclaraciones"
+       />
+    <fragment
+        android:id="@+id/nav_ayuda"
+        android:name="com.arggos.merecomiendas.ui.ayuda.ayuda"
+        android:label="@string/menu_ayuda"
+       />
+    <fragment
+        android:id="@+id/nav_config"
+        android:name="com.arggos.merecomiendas.ui.config.config"
+        android:label="@string/menu_config"
+        />
 </navigation>

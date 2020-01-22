@@ -32,7 +32,7 @@ public class Menup extends Fragment implements View.OnClickListener{
        view = inflater.inflate(R.layout.activity_menu, container, false);
 
 
-            SpaceNavigationView spaceNavigationView = (SpaceNavigationView) view.findViewById(R.id.space);
+           /* SpaceNavigationView spaceNavigationView = (SpaceNavigationView) view.findViewById(R.id.space8);
         spaceNavigationView.initWithSaveInstanceState(savedInstanceState);
         spaceNavigationView.addSpaceItem(new SpaceItem("", R.drawable.iconone));
         spaceNavigationView.addSpaceItem(new SpaceItem("", R.drawable.iconthree));
@@ -54,7 +54,7 @@ public class Menup extends Fragment implements View.OnClickListener{
             public void onItemReselected(int itemIndex, String itemName) {
                 //Toast.makeText(Menu.this, itemIndex + " " + itemName, Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
         //spaceNavigationView.showBadgeAtIndex(0, 3, 2);
         initFabMenu();
 return view;

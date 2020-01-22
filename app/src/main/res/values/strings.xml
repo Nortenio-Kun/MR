@@ -1,22 +1,25 @@
 <resources>
     <string name="app_name">MeRecomiendas</string>
-    <string name="Powered">Powered By Arggos</string>
     <string name="facebook_app_id">452220292138579</string>
     <string name="fb_login_protocol_scheme">fb452220292138579</string>
     <string name="title_activity_screen__four__menu">Menu Principal</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Inicio</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-    <string name="menu_tools">Tools</string>
-    <string name="menu_share">Share</string>
-    <string name="menu_send">Send</string>
+    <string name="menu_perfil">Mi Perfil</string>
+    <string name="menu_mensajes">Mis Mensajes</string>
+    <string name="menu_anuncios">Mi Panel de Anuncios</string>
+    <string name="menu_favoritos">Mis Favoritos</string>
+    <string name="menu_pagos">Mis Pagos</string>
+    <string name="menu_servicios">Mis Servicios Activos</string>
+    <string name="menu_cotizaciones">Mis Cotizaciones</string>
+    <string name="menu_aclaraciones">Mis Aclaraciones</string>
+    <string name="menu_ayuda">Ayuda</string>
+    <string name="menu_config">Configuracion</string>
+
     <string-array name="array_pais">
         <item>Array Item One</item>
         <item>Array Item Two</item>
@@ -27,4 +30,8 @@
         <item>Array Item Two</item>
         <item>Array Item Three</item>
     </string-array>
+    <string name="title_activity_maps">Map</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

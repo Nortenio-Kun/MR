@@ -2,7 +2,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.arggos.merecomiendas">
 
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -11,8 +26,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Test"></activity>
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
         <activity
+            android:name=".MapViewFragment"
+            android:label="@string/title_activity_maps"></activity>
+        <activity android:name=".Test" />
+        <activity
+
             android:name=".Screen_Four_Menu"
             android:label="@string/title_activity_screen__four__menu"
             android:theme="@style/AppTheme.NoActionBar">
@@ -23,13 +55,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".Screen_Three_Otp" />
-        <activity android:name=".Screen_Two_FrmApi" />
-        <activity android:name=".Screen_One_LoginandRegister"></activity>
-        <activity android:name=".Menu"></activity>
-        <activity android:name=".Register_Activity" />
-        <activity android:name=".On_Boarding">
+        <activity android:name=".Screen_Two_FrmApi">
 
+    </activity>
+        <activity android:name=".Screen_One_LoginandRegister">
         </activity>
+        <activity android:name=".Menu" />
+        <activity android:name=".Register_Activity" />
+        <activity android:name=".On_Boarding"></activity>
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"

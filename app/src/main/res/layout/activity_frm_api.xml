@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context=".Screen_Two_FrmApi">
+    tools:context=".Screen_Two_FrmApi"
+    android:id="@+id/Form">
 
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -79,6 +80,7 @@
                 android:id="@+id/btnmapa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="auto_llenado"
                 android:text="boton mapa"/>
             <LinearLayout
                 android:id="@+id/Cuatro"
@@ -171,7 +173,7 @@
             </RadioGroup>
 
             <EditText
-                android:id="@+id/Calley"
+                android:id="@+id/Calle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/Seis"
@@ -182,7 +184,7 @@
                 android:id="@+id/Colonia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/Calley"
+                android:layout_below="@id/Calle"
                 android:textColor="@color/colorWhite"
                 android:hint="Inserta Clonia"
                 android:textColorHint="@color/colorWhite"/>
@@ -192,7 +194,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/Colonia"
                 android:textColor="@color/colorWhite"
-                android:hint="Inserta Calle y Numero"
+                android:hint="Numero int"
                 android:textColorHint="@color/colorWhite"/>
             <EditText
                 android:id="@+id/Cp"
@@ -200,7 +202,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/Seis"
                 android:textColor="@color/colorWhite"
-                android:hint="Inserta Codigo Postal"
+                android:hint="Codigo Postal"
                 android:textColorHint="@color/colorWhite"/>
 
             <EditText
@@ -232,5 +234,7 @@
         android:textSize="14sp"
         android:textStyle="bold"
         android:layout_below="@+id/sc"/>
+
+
 
 </RelativeLayout>
