@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/fondo_f"
     tools:context=".Screen_Two_FrmApi"
     android:id="@+id/Form">
 
@@ -25,6 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <LinearLayout
+            android:background="@drawable/cuadro_blanco"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/ImgProfile"
@@ -34,21 +35,22 @@
 
             <TextView
                 android:id="@+id/Uno"
+                android:textColorHint="@color/com_facebook_likeview_text_color"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_below="@id/ImgProfile"
                 android:textSize="20sp"
-                android:textColor="@color/colorWhite"
+                android:textColor="@color/com_facebook_likeview_text_color"
                 android:text="Nombre:"/>
             <EditText
                 android:id="@+id/Name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/Uno"
-                android:textColor="@color/colorWhite"
+                android:textColor="@color/cardview_dark_background"
                 android:hint="Inserta Nombre Completo"
-                android:textColorHint="@color/colorWhite"/>
+                android:textColorHint="@color/com_facebook_likeview_text_color"/>
 
             <TextView
                 android:id="@+id/Dos"
@@ -57,16 +59,16 @@
                 android:layout_marginTop="10dp"
                 android:layout_below="@id/ImgProfile"
                 android:textSize="20sp"
-                android:textColor="@color/colorWhite"
+                android:textColor="@color/com_facebook_likeview_text_color"
                 android:text="Email:"/>
             <EditText
                 android:id="@+id/Correo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/Dos"
-                android:textColor="@color/colorWhite"
+                android:textColor="@color/cardview_dark_background"
                 android:hint="Inserta Correo Electronico"
-                android:textColorHint="@color/colorWhite"/>
+                android:textColorHint="@color/com_facebook_likeview_text_color"/>
             <TextView
                 android:id="@+id/Tres"
                 android:layout_width="wrap_content"
@@ -74,41 +76,15 @@
                 android:layout_marginTop="10dp"
                 android:layout_below="@id/Correo"
                 android:textSize="20sp"
-                android:textColor="@color/colorWhite"
+                android:textColor="@color/com_facebook_likeview_text_color"
                 android:text="Ubicacion:"/>
-            <Button
-                android:id="@+id/btnmapa"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="auto_llenado"
-                android:text="boton mapa"/>
+
             <LinearLayout
                 android:id="@+id/Cuatro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/Tres"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".50"
-                    android:layout_marginTop="5dp"
-                    android:textSize="20sp"
-                    android:textColor="@color/colorWhite"
-                    android:text="Pais:"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".50"
-                    android:layout_marginTop="5dp"
-                    android:textSize="20sp"
-                    android:textColor="@color/colorWhite"
-                    android:text="Estado:"/>
-
-
-            </LinearLayout>
+                android:orientation="horizontal"/>
 
             <LinearLayout
                 android:id="@+id/Cinco"
@@ -117,23 +93,17 @@
                 android:layout_below="@id/Cuatro"
                 android:orientation="horizontal">
 
-                <Spinner
-                    android:id="@+id/pais"
-                    android:layout_width="fill_parent"
+                <Button
+                    android:id="@+id/btnmapa"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".50"
-                    android:drawSelectorOnTop="true"
-                    android:entries="@array/array_pais"
-                    />
-                <Spinner
-                    android:id="@+id/edo"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".50"
-                    android:drawSelectorOnTop="true"
-                    android:entries="@array/array_edo"
-                    />
-
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="110dp"
+                    android:background="@drawable/boton_finalizar"
+                    android:drawableTint="@null"
+                    android:elevation="0dp"
+                    android:onClick="auto_llenado"
+                    android:text="Mapa" />
             </LinearLayout>
 
             <TextView
@@ -143,8 +113,9 @@
                 android:layout_marginTop="5dp"
                 android:layout_below="@id/Cinco"
                 android:textSize="20sp"
-                android:textColor="@color/colorWhite"
+                android:textColor="@color/com_facebook_likeview_text_color"
                 android:text="Identifica Tipo de Domicilio:"/>
+
             <RadioGroup
                 android:id="@+id/rdgGrupo"
                 android:layout_below="@id/Seis"
@@ -170,6 +141,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Otro"/>
+
             </RadioGroup>
 
             <EditText
@@ -179,36 +151,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/Seis"
-                android:textColor="@color/colorWhite"
+                android:textColor="@color/cardview_dark_background"
 
                 android:hint="Inserta tu Direccion"
 
-                android:textColorHint="@color/colorWhite"/>
+                android:textColorHint="@color/com_facebook_likeview_text_color"/>
 
-            <EditText
-                android:id="@+id/Cp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/Cp"
-                android:textColor="@color/colorWhite"
-                android:hint="Inserta Codigo Postal"
-                android:textColorHint="@color/colorWhite"/>
             <Button
                 android:id="@+id/otp"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="256dp"
-                android:elevation="20dp"
-                android:layout_gravity="center"
                 android:layout_height="45dp"
+                android:layout_gravity="center"
                 android:layout_marginStart="83dp"
                 android:layout_marginTop="7dp"
                 android:layout_marginEnd="72dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/btn_primary"
+                android:elevation="20dp"
                 android:text="Inicia tu experiencia"
                 android:textColor="#FFF"
                 android:textSize="14sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
         </LinearLayout>
 

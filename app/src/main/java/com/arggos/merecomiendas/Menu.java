@@ -5,13 +5,9 @@ import android.view.View;
 import android.view.animation.OvershootInterpolator;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.luseen.spacenavigation.SpaceItem;
-import com.luseen.spacenavigation.SpaceNavigationView;
-import com.luseen.spacenavigation.SpaceOnClickListener;
 
 import android.os.Bundle;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 public class Menu extends AppCompatActivity implements View.OnClickListener{
 
@@ -56,11 +52,11 @@ public class Menu extends AppCompatActivity implements View.OnClickListener{
     }
 
     private void initFabMenu() {
-        fabMain = findViewById(R.id.fabMain);
-        fab2 = findViewById(R.id.fab2);
-        fab3 = findViewById(R.id.fab3);
-        fab4 = findViewById(R.id.fab4);
-        fab5 = findViewById(R.id.fab5);
+        fabMain = findViewById(R.id.fab1_main);
+        fab2 = findViewById(R.id.fab1_2);
+        fab3 = findViewById(R.id.fab1_3);
+        fab4 = findViewById(R.id.fab1_4);
+        fab5 = findViewById(R.id.fab1_5);
 
         fabMain.setAlpha(1f);
         fab2.setAlpha(0f);
@@ -104,7 +100,7 @@ public class Menu extends AppCompatActivity implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.fabMain:
+            case R.id.fab1_main:
                 if(fabMenu){
                     closeFab();
                 }else{

@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/nav_home"
         android:name="com.arggos.merecomiendas.ui.home.Menup"
-        android:label="@string/menu_home" />
+        android:label="@string/menu_home1" />
 
     <fragment
         android:id="@+id/nav_perfil"
@@ -28,9 +28,9 @@
         android:label="@string/menu_anuncios"
        />
     <fragment
-        android:id="@+id/nav_favoritos"
-        android:name="com.arggos.merecomiendas.ui.favoritos.favoritos"
-        android:label="@string/menu_favoritos"
+        android:id="@+id/nav_busqueda"
+        android:name="com.arggos.merecomiendas.Otros_Serviciosp"
+        android:label=""
         />
     <fragment
         android:id="@+id/nav_pagos"

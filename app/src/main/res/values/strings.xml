@@ -9,6 +9,7 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Inicio</string>
+    <string name="menu_home1">¿Como te ayudo?</string>
     <string name="menu_perfil">Mi Perfil</string>
     <string name="menu_mensajes">Mis Mensajes</string>
     <string name="menu_anuncios">Mi Panel de Anuncios</string>

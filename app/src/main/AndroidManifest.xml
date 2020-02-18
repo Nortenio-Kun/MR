@@ -25,7 +25,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme.NoActionBar"
+       >
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -52,8 +53,10 @@
         <activity
 
             android:name=".Screen_Four_Menu"
-            android:label="@string/title_activity_screen__four__menu"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:label="@string/title_activity_screen__four__menu">
+
+
+        </activity>
         <activity android:name=".Screen_Three_Otp" />
         <activity android:name=".Screen_Two_FrmApi" />
         <activity android:name=".Screen_One_LoginandRegister">

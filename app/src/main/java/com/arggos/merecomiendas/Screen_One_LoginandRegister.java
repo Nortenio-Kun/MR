@@ -130,7 +130,7 @@ public class Screen_One_LoginandRegister extends AppCompatActivity implements Vi
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.BtnInicioSesion: /** Inicio de Sesion con Firebase via usuario y contraseña */
-                Intent i = new Intent(Screen_One_LoginandRegister.this,Screen_Four_Menu.class);
+                Intent i = new Intent(Screen_One_LoginandRegister.this,Screen_Two_FrmApi.class);
                 startActivity(i);
                 break;
             case R.id.InicioFacebook:
@@ -189,11 +189,14 @@ public class Screen_One_LoginandRegister extends AppCompatActivity implements Vi
                             updateUI();
                         }else{
                             Log.d("TAGGO", "signin failure");
+
                         }
                     });
                 }
             }catch (ApiException e){
+                Toast.makeText(this, e.toString(), Toast.LENGTH_SHORT).show();
                 e.printStackTrace();
+                Log.e("error","No entra");
             }
         }
         else {

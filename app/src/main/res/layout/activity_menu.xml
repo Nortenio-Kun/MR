@@ -5,208 +5,225 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+
     tools:context=".Menu">
 
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="358dp"
+        android:layout_height="554dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.033"
         tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="110dp"
+            android:layout_marginTop="25dp"
             android:gravity="center_vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fab2"
+            <ImageButton
+                android:id="@+id/fab1_2"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_margin="4dp"
-                android:tint="@android:color/white"
-                app:fabSize="mini" />
+                android:background="@drawable/veterinario"
+                android:tint="@android:color/white" />
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fab4"
+            <ImageButton
+                android:id="@+id/fab1_4"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_margin="4dp"
-                android:tint="@android:color/white"
-                app:fabSize="mini" />
+                android:background="@drawable/enfermera"
+                android:tint="@android:color/white" />
 
 
             <ImageButton
-                android:id="@+id/fabMain"
+                android:id="@+id/fab1_main"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:background="@drawable/ic_hearth"
+                android:background="@drawable/salud"
                 android:elevation="10dp" />
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fab3"
+            <ImageButton
+                android:id="@+id/fab1_3"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_margin="4dp"
-                android:tint="@android:color/white"
-                app:fabSize="mini" />
+                android:background="@drawable/inyeccion"
+                android:tint="@android:color/white" />
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fab5"
+            <ImageButton
+                android:id="@+id/fab1_5"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_margin="4dp"
-                android:tint="@android:color/white"
-                app:fabSize="mini" />
+                android:background="@drawable/ambulancia"
+                android:tint="@android:color/white" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="110dp"
             android:gravity="center_vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
+            <ImageButton
+                android:id="@+id/fab2_2"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_margin="4dp"
-                android:tint="@android:color/white"
-                app:fabSize="mini" />
+                android:background="@drawable/cerrajero"
+                android:tint="@android:color/white" />
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
+            <ImageButton
+                android:id="@+id/fab2_4"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_margin="4dp"
-                android:tint="@android:color/white"
-                app:fabSize="mini" />
+                android:background="@drawable/llave"
+                android:tint="@android:color/white" />
 
 
             <ImageButton
-                android:id="@+id/Unouno"
+                android:id="@+id/fab2_main"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:background="@drawable/ic_hogar"
+                android:background="@drawable/urgencia"
                 android:elevation="10dp" />
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
+            <ImageButton
+                android:id="@+id/fab2_3"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_margin="4dp"
-                android:tint="@android:color/white"
-                app:fabSize="mini" />
+                android:background="@drawable/gas"
+                android:tint="@android:color/white" />
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
+            <ImageButton
+                android:id="@+id/fab2_5"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_margin="4dp"
-                android:tint="@android:color/white"
-                app:fabSize="mini" />
+                android:background="@drawable/plomeria"
+                android:tint="@android:color/white" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="110dp"
             android:gravity="center_vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
+            <ImageButton
+                android:id="@+id/fab3_2"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_margin="4dp"
-                android:tint="@android:color/white"
-                app:fabSize="mini" />
+                android:background="@drawable/grua"
+                android:tint="@android:color/white" />
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
+            <ImageButton
+                android:id="@+id/fab3_4"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_margin="4dp"
-                android:tint="@android:color/white"
-                app:fabSize="mini" />
+                android:background="@drawable/ponchadura"
+                android:tint="@android:color/white" />
 
 
             <ImageButton
-                android:id="@+id/Dosdos"
+                android:id="@+id/fab3_main"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:background="@drawable/ic_auto"
+                android:background="@drawable/emergencia"
                 android:elevation="10dp" />
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
+            <ImageButton
+                android:id="@+id/fab3_3"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_margin="4dp"
-                android:tint="@android:color/white"
-                app:fabSize="mini" />
+                android:background="@drawable/gasolina"
+                android:tint="@android:color/white" />
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
+            <ImageButton
+                android:id="@+id/fab3_5"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_margin="4dp"
-                android:tint="@android:color/white"
-                app:fabSize="mini" />
+                android:background="@drawable/bateria"
+                android:tint="@android:color/white" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="110dp"
             android:gravity="center_vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
+            <ImageButton
+                android:id="@+id/fab4_2"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_margin="4dp"
-                android:tint="@android:color/white"
-                app:fabSize="mini" />
+                android:background="@drawable/pintura"
+                android:tint="@android:color/white" />
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
+            <ImageButton
+                android:id="@+id/fab4_4"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_margin="4dp"
-                android:tint="@android:color/white"
-                app:fabSize="mini" />
+                android:background="@drawable/albanil"
+                android:tint="@android:color/white" />
 
 
             <ImageButton
-                android:id="@+id/Trestres"
+                android:id="@+id/fab4_main"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:background="@drawable/ic_tuerca"
+                android:background="@drawable/servicios"
                 android:elevation="10dp" />
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
+            <ImageButton
+                android:id="@+id/fab4_3"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_margin="4dp"
-                android:tint="@android:color/white"
-                app:fabSize="mini" />
+                android:background="@drawable/foco"
+                android:tint="@android:color/white" />
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/Otros"
+            <ImageButton
+                android:id="@+id/fab4_5"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_margin="4dp"
-                android:tint="@android:color/white"
-                app:fabSize="mini" />
+                android:background="@drawable/otros"
+                android:tint="@android:color/white" />
 
         </LinearLayout>
 

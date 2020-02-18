@@ -1,12 +1,16 @@
 package com.arggos.merecomiendas;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -24,8 +28,11 @@ import com.squareup.picasso.Picasso;
 import java.util.HashMap;
 import java.util.Map;
 
+import static java.lang.Boolean.TRUE;
+
 public class Screen_Two_FrmApi extends AppCompatActivity {
 
+    private static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
     //Variables generales de Firebase
     private FirebaseAuth mAuth;
     //Variables formulario
@@ -36,6 +43,7 @@ public class Screen_Two_FrmApi extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_frm_api);
 
         mAuth = FirebaseAuth.getInstance();
@@ -46,12 +54,12 @@ public class Screen_Two_FrmApi extends AppCompatActivity {
         direccion = findViewById(R.id.Direccion);
         otp = findViewById(R.id.otp);
 
-        cp = findViewById(R.id.Cp);
+
 
         otp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String user_id = mAuth.getCurrentUser().getUid();
+               /* String user_id = mAuth.getCurrentUser().getUid();
                 DatabaseReference current_user_db = FirebaseDatabase.getInstance().getReference().child("Users").child("Costumers").child(user_id);
                 //current_user_db.setValue(true);
                 Map<String, Object> datosUsuario = new HashMap<>();
@@ -62,7 +70,9 @@ public class Screen_Two_FrmApi extends AppCompatActivity {
                 current_user_db.child("Pd").push().setValue(datosUsuario);
                 Intent second = new Intent(Screen_Two_FrmApi.this, Screen_Three_Otp.class);
                 startActivity(second);
-                finish();
+                finish();*/
+               Intent i = new Intent(Screen_Two_FrmApi.this,Screen_Four_Menu.class);
+                startActivity(i);
             }
         });
 
@@ -78,6 +88,7 @@ public class Screen_Two_FrmApi extends AppCompatActivity {
         String foto = pref.getString("Imagen","No");
         if(foto != "No"){
             Picasso.get().load(foto+"?type=large").into(imagen);
+
         }
     }
 
@@ -88,17 +99,95 @@ public class Screen_Two_FrmApi extends AppCompatActivity {
     }
 
     public void auto_llenado(View view){
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+
+            // Asking user if explanation is needed
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                    Manifest.permission.ACCESS_FINE_LOCATION)) {
+
+                // Show an explanation to the user *asynchronously* -- don't block
+                // this thread waiting for the user's response! After the user
+                // sees the explanation, try again to request the permission.
+
+                //Prompt the user once explanation has been shown
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                        MY_PERMISSIONS_REQUEST_LOCATION);
 
 
+            } else {
+                // No explanation needed, we can request the permission.
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                        MY_PERMISSIONS_REQUEST_LOCATION);
+            }
+            //Toast.makeText(Cont, "permission denied", Toast.LENGTH_LONG).show();
+
+
+        } else {
+            Fragment mFragment = null;
+            mFragment = new MapViewFragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.Form, mFragment).addToBackStack("hola").commit();
+
+            // Toast.makeText(Cont, "permission denied", Toast.LENGTH_LONG).show();
+
+        }
+    }
+
+
+    public void auto_permiso(){
         Fragment mFragment = null;
-        mFragment = new MapViewFragment();
-        FragmentManager fragmentManager = getSupportFragmentManager();
-       fragmentManager.beginTransaction().replace(R.id.Form, mFragment).addToBackStack("hola").commit();
-     //   fragmentManager.beginTransaction().add(mFragment,"hola").addToBackStack("hola").commit();
+            mFragment = new MapViewFragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.Form, mFragment).addToBackStack("hola").commit();
+
+
+
     }
 
     public void llenar(){
         SharedPreferences sp = this.getPreferences( MODE_PRIVATE);
         direccion.setText(sp.getString("direccion","hola"));
+    }
+
+
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        Toast.makeText(this, "Permiso llego", Toast.LENGTH_SHORT).show();
+        switch (requestCode) {
+            case MY_PERMISSIONS_REQUEST_LOCATION: {
+                // If request is cancelled, the result arrays are empty.
+
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    // permission was granted. Do the
+                    // contacts-related task you need to do.
+                    if (ContextCompat.checkSelfPermission(this,
+                            Manifest.permission.ACCESS_FINE_LOCATION)
+                            == PackageManager.PERMISSION_GRANTED) {
+                        auto_permiso();
+
+                    }
+
+                } else {
+
+                    Toast.makeText(this, "Imposible Entrar al Mapa", Toast.LENGTH_SHORT).show();
+                    // Permission denied, Disable the functionality that depends on this permission.
+                    //   Toast.makeText(Cont, "permission denied", Toast.LENGTH_LONG).show();
+                }
+                return;
+            }
+
+
+
+            // other 'case' lines to check for other permissions this app might request.
+            // You can add here other case statements according to your requirement.
+        }
     }
 }
