@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <item
+        android:id="@+id/nav_mensajes"
+        android:icon="@drawable/mensajes"
+        android:title="Mensages" />
+    <item
+        android:id="@+id/nav_anuncios"
+        android:icon="@drawable/panel"
+        android:title="Panel" />
+
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/inicio"
+        android:title="Inicio" />
+
+    <item
+        android:id="@+id/nav_busqueda"
+        android:icon="@drawable/buscar"
+        android:title="Buscar" />
+
+
+    <item
+        android:id="@+id/nav_pagos"
+        android:icon="@drawable/pagos"
+        android:title="Pagos" />
+
+
+</menu>
