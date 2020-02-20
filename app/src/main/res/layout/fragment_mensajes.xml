@@ -1,97 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.mensajes.mensajes">
+    tools:context="com.arggos.merecomiendas.ui.mensajes.mensajes"
+    android:orientation="vertical">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/pantalla_dos">
+        android:layout_height="wrap_content"
+        android:text="No users found!"
+        android:id="@+id/noUsersText"
+        android:visibility="gone"/>
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/nombre1"
-                        android:layout_width="140dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:backgroundTint="@color/space_transparent"
-                        android:gravity="center"
-                        android:text="Pedro Alcala"
-                        android:textAlignment="center"
-                        android:textColor="@color/default_active_item_color"
-                        android:textSize="25dp" />
-
-                    <Button
-                        android:id="@+id/asunt1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@drawable/fondo"
-                        android:gravity="center"
-                        android:text="Fuga de Gas"
-                        android:textAlignment="center"
-                        android:textSize="25dp" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:orientation="horizontal"
-                android:layout_marginTop="5dp">
-
-                <TextView
-                    android:textColor="@color/default_active_item_color"
-                    android:id="@+id/nombre2"
-                    android:layout_width="140dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/space_transparent"
-                    android:gravity="center"
-                    android:text="Juan Perez"
-                    android:textAlignment="center"
-                    android:textSize="25dp" />
-
-                <Button
-                    android:id="@+id/asunt2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/fondo"
-                    android:gravity="center"
-                    android:text="Puerta Corroida"
-                    android:textAlignment="center"
-                    android:textSize="25dp" />
-            </LinearLayout>
-
-        </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</FrameLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/usersList"/>
+</LinearLayout>
