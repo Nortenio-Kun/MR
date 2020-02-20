@@ -99,7 +99,7 @@ public class mensajes extends Fragment {
             e.printStackTrace();
         }
 
-        if(totalUsers <=1){
+        if(totalUsers <1){
             noUsersText.setVisibility(View.VISIBLE);
             usersList.setVisibility(View.GONE);
         }
