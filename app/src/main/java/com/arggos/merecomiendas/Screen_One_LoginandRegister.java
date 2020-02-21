@@ -92,8 +92,6 @@ public class Screen_One_LoginandRegister extends AppCompatActivity implements Vi
         InicioFirebase = findViewById(R.id.BtnInicioSesion);
         InicioFacebook = findViewById(R.id.InicioFacebook);
         Iniciogoogle = findViewById(R.id.InicioGoogle);
-        mAuth = FirebaseAuth.getInstance();
-        UserDetails.username=mAuth.getCurrentUser().getUid();
         //Declaracion listeners botones inicio sesion
         InicioFirebase.setOnClickListener(this);
         InicioFacebook.setOnClickListener(this);

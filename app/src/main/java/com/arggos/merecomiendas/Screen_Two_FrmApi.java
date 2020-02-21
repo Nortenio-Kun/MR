@@ -47,6 +47,7 @@ public class Screen_Two_FrmApi extends AppCompatActivity {
         setContentView(R.layout.activity_frm_api);
 
         mAuth = FirebaseAuth.getInstance();
+        UserDetails.username=mAuth.getCurrentUser().getUid();
 
         name = findViewById(R.id.Name);
         correo = findViewById(R.id.Correo);
