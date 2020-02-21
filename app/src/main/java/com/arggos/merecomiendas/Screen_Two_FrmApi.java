@@ -59,20 +59,20 @@ public class Screen_Two_FrmApi extends AppCompatActivity {
         otp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               /* String user_id = mAuth.getCurrentUser().getUid();
+               String user_id = mAuth.getCurrentUser().getUid();
                 DatabaseReference current_user_db = FirebaseDatabase.getInstance().getReference().child("Users").child("Costumers").child(user_id);
                 //current_user_db.setValue(true);
                 Map<String, Object> datosUsuario = new HashMap<>();
                 datosUsuario.put("Name",name.getText().toString());
                 datosUsuario.put("Email",correo.getText().toString());
                 datosUsuario.put("Direction",direccion.getText().toString());
-                datosUsuario.put("Cp",cp.getText().toString());
+//                datosUsuario.put("Cp",cp.getText().toString());
                 current_user_db.child("Pd").push().setValue(datosUsuario);
                 Intent second = new Intent(Screen_Two_FrmApi.this, Screen_Three_Otp.class);
                 startActivity(second);
-                finish();*/
-               Intent i = new Intent(Screen_Two_FrmApi.this,Screen_Four_Menu.class);
-                startActivity(i);
+                finish();
+              /* Intent i = new Intent(Screen_Two_FrmApi.this,Screen_Four_Menu.class);
+                startActivity(i);*/
             }
         });
 

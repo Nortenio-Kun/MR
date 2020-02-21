@@ -122,7 +122,7 @@ public class Screen_Three_Otp extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             loadingBar.dismiss();
-                            Intent second = new Intent(Screen_Three_Otp.this, Menu.class);
+                            Intent second = new Intent(Screen_Three_Otp.this, Screen_Four_Menu.class);
                             startActivity(second);
                             finish();
                         } else {
