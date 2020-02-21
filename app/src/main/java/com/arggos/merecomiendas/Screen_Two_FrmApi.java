@@ -56,25 +56,6 @@ public class Screen_Two_FrmApi extends AppCompatActivity {
         otp = findViewById(R.id.otp);
 
 
-
-        otp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               String user_id = mAuth.getCurrentUser().getUid();
-                DatabaseReference current_user_db = FirebaseDatabase.getInstance().getReference().child("Users").child("Costumers").child(user_id);
-                //current_user_db.setValue(true);
-                Map<String, Object> datosUsuario = new HashMap<>();
-                datosUsuario.put("Name",name.getText().toString());
-                datosUsuario.put("Email",correo.getText().toString());
-                datosUsuario.put("Direction",direccion.getText().toString());
-//                datosUsuario.put("Cp",cp.getText().toString());
-                current_user_db.child("Pd").push().setValue(datosUsuario);
-                Intent second = new Intent(Screen_Two_FrmApi.this, Screen_Four_Menu.class);
-                startActivity(second);
-                finish();
-            }
-        });
-
         SharedPreferences pref = this.getSharedPreferences("API", Context.MODE_PRIVATE);
         String nombre = pref.getString("Nombre","No");
         if(nombre != "No"){
@@ -87,8 +68,26 @@ public class Screen_Two_FrmApi extends AppCompatActivity {
         String foto = pref.getString("Imagen","No");
         if(foto != "No"){
             Picasso.get().load(foto+"?type=large").into(imagen);
-
         }
+        otp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String user_id = mAuth.getCurrentUser().getUid();
+                DatabaseReference current_user_db = FirebaseDatabase.getInstance().getReference().child("Usuarios").child("Clientes").child(user_id);
+                //current_user_db.setValue(true);
+                Map<String, Object> datosUsuario = new HashMap<>();
+                datosUsuario.put("Name",name.getText().toString());
+                datosUsuario.put("Email",correo.getText().toString());
+                datosUsuario.put("Direction",direccion.getText().toString());
+                datosUsuario.put("profileimage",foto);
+                datosUsuario.put("Confirmacion","True");
+//                datosUsuario.put("Cp",cp.getText().toString());
+                current_user_db.updateChildren(datosUsuario);
+                Intent second = new Intent(Screen_Two_FrmApi.this, Screen_Four_Menu.class);
+                startActivity(second);
+                finish();
+            }
+        });
     }
 
 

@@ -38,12 +38,14 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Screen_Four_Menu extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     Bundle instance;
+    public static String nombres,correos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,6 +95,12 @@ public class Screen_Four_Menu extends AppCompatActivity {
 
         View h = navigationView.getHeaderView(0);
         ImageView perfil = h.findViewById(R.id.imageP);
+        TextView nombre = h.findViewById(R.id.nombremenu);
+        nombre.setTextSize(12);
+        TextView correo = h.findViewById(R.id.correomenu);
+        correo.setTextSize(12);
+        nombre.setText(nombres);
+        correo.setText(correos);
         SharedPreferences pref = this.getSharedPreferences("API", Context.MODE_PRIVATE);
         String foto = pref.getString("Imagen","No");
         Picasso.get().load(foto+"?type=large").into(perfil);
