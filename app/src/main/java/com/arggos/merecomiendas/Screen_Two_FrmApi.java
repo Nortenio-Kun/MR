@@ -71,8 +71,6 @@ public class Screen_Two_FrmApi extends AppCompatActivity {
                 Intent second = new Intent(Screen_Two_FrmApi.this, Screen_Three_Otp.class);
                 startActivity(second);
                 finish();
-              /* Intent i = new Intent(Screen_Two_FrmApi.this,Screen_Four_Menu.class);
-                startActivity(i);*/
             }
         });
 
